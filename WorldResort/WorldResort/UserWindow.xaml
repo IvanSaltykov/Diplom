@@ -1,0 +1,57 @@
+﻿<Window x:Class="WorldResort.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldResort"
+        mc:Ignorable="d"
+        Title="WorldResort" 
+        Height="600" 
+        Width="1200" 
+        Background="#F5F5F5"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Frame
+            x:Name="frameUserWindow"
+            Margin="10,10,10,10"
+            NavigationUIVisibility="Hidden"
+            />
+        <Grid 
+            Grid.Row="1"
+            Margin="0, 10">
+            <Button
+                x:Name="buttonProfileUserWindow"
+                Content="Профиль" 
+                Width="150"
+                Background="#FF03A9F4" 
+                Foreground="White"
+                Click="buttonProfileUserWindow_Click" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="30,0,0,0" Cursor="Hand"/>
+            <Button
+                x:Name="buttonResortUserWindow"
+                Content="Главная" 
+                Width="150"
+                Background="#FF03A9F4" 
+                Foreground="White"
+                Click="buttonResortUserWindow_Click" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" Cursor="Hand"/>
+            <Button
+                x:Name="buttonFavouriteUserWindow"
+                Content="Избранное"
+                Background="#FF03A9F4" 
+                Foreground="White"
+                Click="buttonFavouriteUserWindow_Click" 
+                HorizontalAlignment="Right" 
+                Width="150"
+                Margin="0,0,30,0"
+                VerticalAlignment="Center" Cursor="Hand"/>
+        </Grid>
+    </Grid>
+</Window>

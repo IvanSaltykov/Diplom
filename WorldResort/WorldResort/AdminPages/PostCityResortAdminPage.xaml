@@ -1,0 +1,134 @@
+﻿<Page x:Class="WorldResort.AdminPages.PostCityResortAdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WorldResort.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PostCityResortAdminPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel
+            Orientation="Vertical"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left">
+            <TextBlock
+                Text="Часть света:"
+                Padding="5"/>
+            <TextBlock
+                Text="Страна:"
+                Padding="5"/>
+            <TextBlock
+                Text="Город:"
+                    Padding="5"/>
+            <CheckBox
+                Content="Особый климат"
+                x:Name="checkBoxClimatePostCityResort"
+                Margin="0,10,0,0"
+                IsEnabled="False"
+                Visibility="Visible" 
+                Background="#FF03A9F4"
+                Padding="5"/>
+            <CheckBox
+                Content="Минемельные воды"
+                x:Name="checkBoxMineralWaterPostCityResort"
+                Margin="0,10,0,0"
+                IsEnabled="False"
+                Visibility="Visible" 
+                Background="#FF03A9F4"
+                Padding="5"/>
+            <CheckBox
+                Content="Лечебные грязи"
+                x:Name="checkBoxTherapeuticMudPostCityResort"
+                Margin="0,10,0,0"
+                IsEnabled="False"
+                Visibility="Visible" 
+                Background="#FF03A9F4"
+                Padding="5"/>
+            <TextBlock
+                Text="Описание:"
+                    Margin="0,0,75,0"
+                Padding="5"/>
+        </StackPanel>
+        <StackPanel
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Orientation="Vertical"
+            Margin="150,0,0,0">
+            <ComboBox
+                Name="comboBoxPartWorldPostCityResort"
+                Width="150"
+                Height="25"
+                ItemsSource="{Binding Path=Name}"
+                IsEditable="True"
+                SelectionChanged="comboBoxPartWorldPostCityResort_SelectionChanged"
+                HorizontalAlignment="Left"/>
+            <ComboBox
+                Name="comboBoxCountryPostCityResort"
+                Width="150"
+                Height="25"
+                ItemsSource="{Binding Path=Name}"
+                IsEditable="True"
+                    SelectionChanged="comboBoxCountryPostCityResort_SelectionChanged"
+                    IsEnabled="False"
+                HorizontalAlignment="Left"/>
+            <TextBox
+                    x:Name="textBoxNameCityResort"
+                    Width="150"
+                    IsEnabled="False"
+                    TextChanged="textBoxNameCityResort_TextChanged"
+                HorizontalAlignment="Left"/>
+            <TextBox
+                    x:Name="textBoxDescriptionCityResort"
+                    Width="213"
+                    IsEnabled="False"
+                    TextWrapping="Wrap"
+                    VerticalScrollBarVisibility="Visible"
+                    AcceptsReturn="True"
+                    TextChanged="textBoxDescriptionCityResort_TextChanged" 
+                    Height="112"
+                    HorizontalAlignment="Left"
+                    Margin="0,120,0,0"/>
+        </StackPanel>
+        <Grid
+                Grid.Column="1"
+                Margin="5">
+            <Button
+                x:Name="buttonCreatePhotoPostCityResort"
+                Content="Добавить картинку"
+                Click="buttonCreatePhotoPostCityResort_Click"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Background="#FF03A9F4" 
+                Foreground="White"
+                Margin="5"/>
+            <Image
+                x:Name="imagePhotobuttonCreatePhotoPostCityResort"
+                Margin="10,0,0,0"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                MaxWidth="250"/>
+        </Grid>
+        <Button
+                Content="Добавить"
+                Name="buttonPostCityResort"
+                Click="buttonPostCityResort_Click"
+                IsEnabled="False"
+                Grid.ColumnSpan="2"
+                Grid.Row="1" 
+                Background="#FF03A9F4" 
+                Foreground="White"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="30,0" Cursor="Hand"/>
+    </Grid>
+</Page>

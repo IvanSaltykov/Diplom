@@ -1,0 +1,26 @@
+﻿<Page x:Class="WorldResort.AdminPages.GetCityResortAdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WorldResort.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GetCityResortAdminPage">
+
+    <Grid>
+        <ListView
+            x:Name="listViewGetCityResort"
+            PreviewMouseDoubleClick="listViewGetCityResort_PreviewMouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id}">Id</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">Имя</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Climate}">Особый улимат</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TherapeuticMud}">Лечебные грязи</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=MineralWater}">Минеральные воды</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

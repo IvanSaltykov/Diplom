@@ -1,0 +1,34 @@
+﻿<Window x:Class="WorldResort.AdminDialog.CountryAdminDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldResort.AdminDialog"
+        mc:Ignorable="d"
+        Title="CountryAdminDialog" Height="450" Width="800">
+    <Grid>
+        <StackPanel
+            Orientation="Vertical">
+            <TextBlock
+                x:Name="textBlockIdCountryDialog"
+                Margin="0, 0, 0, 10"/>
+            <TextBlock
+                x:Name="textBlockNameCountryDialog"
+                Margin="0, 0, 0, 10"/>
+            <TextBlock
+                x:Name="textBlockCountryCountryDialog"
+                Margin="0, 0, 0, 10"
+                Text="Список городов страны:"/>
+            <ListView
+                x:Name="listViewGetCountry"
+                Margin="0,0,400,0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Id}">Id</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">Имя</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>

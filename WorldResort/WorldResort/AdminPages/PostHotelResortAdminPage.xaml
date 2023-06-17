@@ -1,0 +1,161 @@
+﻿<Page x:Class="WorldResort.AdminPages.PostHotelResortAdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WorldResort.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" 
+      d:DesignWidth="800"
+      Title="PostHotelResortAdminPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <StackPanel
+            Orientation="Vertical"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left">
+                <TextBlock
+                Text="Часть света:"
+                Padding="5"/>
+                <TextBlock
+                Text="Страна:"
+                    Padding="5"/>
+                <TextBlock
+                Text="Город:"
+                    Padding="5"/>
+                <TextBlock
+                Text="Отель:"
+                    Padding="5"/>
+                <TextBlock
+                Text="Количество звезд:"
+                    Padding="5"/>
+                <TextBlock
+                Text="Стоимость поездки:"
+                    Padding="5"/>
+                <TextBlock
+                Text="Количество типов номеров:"
+                    Padding="5"/>
+                <TextBlock
+                Text="Описание:"
+                    Padding="5"
+                    Margin="0,50,0,0"/>
+            </StackPanel>
+            <StackPanel
+            Orientation="Vertical"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Margin="180,0,0,0">
+                <ComboBox
+                Name="comboBoxPartWorldPostHotelResort"
+                Width="150"
+                Height="25"
+                    HorizontalAlignment="Left"
+                ItemsSource="{Binding Path=Name}"
+                IsEditable="True"
+                    SelectionChanged="comboBoxPartWorldPostHotelResort_SelectionChanged"/>
+                <ComboBox
+                Name="comboBoxCountryPostHotelResort"
+                Width="150"
+                Height="25"
+                    HorizontalAlignment="Left"
+                ItemsSource="{Binding Path=Name}"
+                IsEditable="True"
+                    SelectionChanged="comboBoxCountryPostHotelResort_SelectionChanged"
+                    IsEnabled="False"/>
+                <ComboBox
+                Name="comboBoxCityPostHotelResort"
+                Width="150"
+                    HorizontalAlignment="Left"
+                Height="25"
+                ItemsSource="{Binding Path=Name}"
+                IsEditable="True"
+                    SelectionChanged="comboBoxCityPostHotelResort_SelectionChanged"
+                    IsEnabled="False"
+                    Margin="0,3,0,0"/>
+                <TextBox
+                    x:Name="textBoxNameHotelResort"
+                    Width="150"
+                    IsEnabled="False"
+                    HorizontalAlignment="Left"
+                    />
+                <TextBox
+                    x:Name="textBoxStarHotelResort"
+                    Width="150"
+                    IsEnabled="False"
+                    HorizontalAlignment="Left"
+                    TextChanged="textBoxStarHotelResort_TextChanged"
+                    Margin="0,2,0,0"/>
+                <TextBox
+                    x:Name="textBoxPriceHotelResort"
+                    Width="150"
+                    IsEnabled="False"
+                    HorizontalAlignment="Left"
+                    TextChanged="textBoxPriceHotelResort_TextChanged"/>
+                <TextBox
+                    x:Name="textBoxCountTypeRoomResort"
+                    Width="150"
+                    IsEnabled="False"
+                    HorizontalAlignment="Left"
+                    TextChanged="textBoxCountTypeRoomResort_TextChanged"/>
+                <Button
+                    Name="buttonCreateTypeRoom"
+                    Content="Создать"
+                    Click="buttonCreateTypeRoom_Click"
+                    Cursor="Hand"
+                    HorizontalAlignment="Center"
+                    Margin="150,10,0,10" Background="#FF03A9F4" Foreground="White"/>
+                <TextBox
+                    x:Name="textBoxDescriptionHotelResort"
+                    IsEnabled="False" 
+                    TextWrapping="Wrap"
+                    VerticalScrollBarVisibility="Visible"
+                    AcceptsReturn="True"
+                    HorizontalAlignment="Left" 
+                    BorderBrush="#FF03A9F4"
+                    Width="200"
+                    Height="100"/>
+            </StackPanel>
+        </Grid>
+        <Grid
+                Grid.Row="0"
+                Grid.Column="1">
+            <Button
+                x:Name="buttonCreatePhotoPostHotelResort"
+                Content="Добавить картинку"
+                Width="150"
+                Height="30"
+                Click="buttonCreatePhotoPostHotelResort_Click" 
+                Background="#FF03A9F4" 
+                Foreground="White"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="10"/>
+            <Image
+                x:Name="imagePhotobuttonCreatePhotoPostHotelResort"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                MaxWidth="250"/>
+        </Grid>
+        <Button
+                Content="Добавить"
+                Name="buttonPostHotelResort"
+                Click="buttonPostHotelResort_Click"
+                IsEnabled="False"
+                Grid.Row="1"
+                Grid.ColumnSpan="2" 
+                Background="#FF03A9F4" 
+                Foreground="White"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Padding="40,0"/>
+    </Grid>
+</Page>

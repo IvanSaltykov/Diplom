@@ -1,0 +1,82 @@
+﻿<Window x:Class="WorldResort.UserDialog.HotelsUserDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldResort.UserDialog"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="" 
+        Height="600" 
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5">
+    <Grid
+        Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock
+            x:Name="textBlock"
+            Text="Отели:"
+            FontSize="20"
+            FontWeight="bold"/>
+        <ListView
+            x:Name="listView"
+            Grid.Row="1"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            HorizontalAlignment="Center"
+            MouseDoubleClick="listView_MouseDoubleClick">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid
+                        Background="White"
+                        Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  Width="400"/>
+                            <ColumnDefinition  Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            x:Name="imageHotelItem"
+                            Grid.Row="0"
+                            
+                            HorizontalAlignment="Center"
+                            Margin="5">
+                            <Image.Source>
+                                <Binding Path="image">
+
+                                </Binding>
+                            </Image.Source>
+                        </Image>
+                        <StackPanel
+                            Orientation="Vertical"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Grid.Column="1">
+                            <TextBlock
+                            x:Name="textBlockNameHotelItem"
+                            Text="{Binding Name}"/>
+                            <TextBlock
+                            x:Name="textBlockStarsHotelItem"
+                            Text="{Binding Star}"/>
+                            <TextBlock
+                            x:Name="textBlockDescriptionHotelItem"
+                            Text="{Binding Description}"
+                            TextTrimming="CharacterEllipsis"
+                            TextWrapping="Wrap"
+                            MaxWidth="300"
+                            MaxHeight="250"/>
+                        </StackPanel>
+
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>

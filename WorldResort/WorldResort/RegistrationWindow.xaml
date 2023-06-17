@@ -1,0 +1,155 @@
+﻿<Window x:Class="WorldResort.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WorldResort"
+        mc:Ignorable="d"
+        Title="WorldResort - Регистрация" 
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5">
+    <Grid>
+        <TextBlock 
+            Margin="0,50,0,0"
+            TextWrapping="Wrap" 
+            Text="Регистрация"
+            FontSize="20" 
+            FontWeight="bold" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Center" 
+            Width="130"
+            />
+        <TextBlock 
+            Margin="0,0,200,200"
+            TextWrapping="Wrap" 
+            Text="Имя:"
+            FontSize="15" 
+            FontWeight="bold" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Width="130"
+            />
+        <TextBlock 
+            Margin="0,0,200,125"
+            TextWrapping="Wrap" 
+            Text="Фамилия:"
+            FontSize="15" 
+            FontWeight="bold" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Width="130"
+            />
+        <TextBlock 
+            Margin="0,0,200,50"
+            TextWrapping="Wrap" 
+            Text="Номер телефона:"
+            FontSize="15" 
+            FontWeight="bold" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Width="130"
+            />
+        <TextBlock 
+            Margin="0,25,200,0"
+            TextWrapping="Wrap" 
+            Text="Эл. почта:"
+            FontSize="15" 
+            FontWeight="bold" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Width="130"
+            />
+        <TextBlock 
+            Margin="0,100,200,0"
+            TextWrapping="Wrap" 
+            Text="Пароль:"
+            FontSize="15" 
+            FontWeight="bold" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Width="130"
+            />
+        <TextBlock 
+            Margin="0,175,200,0"
+            TextWrapping="Wrap" 
+            Text="Подтверждение пароля:"
+            FontSize="15" 
+            FontWeight="bold" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Width="130"
+            />
+        
+        <TextBox
+                x:Name="textBoxNameRegistration" 
+                Height="25"
+                Margin="150,0,0,200" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                Width="198"
+                Style="{StaticResource CustomTextBoxStyle}"/>
+        <TextBox
+                x:Name="textBoxSurnameRegistration" 
+                Height="25"
+                Margin="150,0,0,125" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                Width="198"
+                Style="{StaticResource CustomTextBoxStyle}"/>
+        <TextBox
+                x:Name="textBoxPhoneNumberRegistration" 
+                Height="25"
+                Margin="150,0,0,50" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                Width="198"
+                TextChanged="textBoxPhoneNumberRegistration_TextChanged"
+                Style="{StaticResource CustomTextBoxStyle}"/>
+        <TextBox
+                x:Name="textBoxLoginRegistration" 
+                Height="25"
+                Margin="150,25,0,0" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                Width="198"
+                Style="{StaticResource CustomTextBoxStyle}"/>
+        <PasswordBox
+                x:Name="textBoxPasswordRegistration" 
+                Height="25"
+                Margin="150,100,0,0" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"  
+                Width="198"
+                Style="{StaticResource CustomPasswordBoxStyle}"/>
+        <PasswordBox
+                x:Name="textBoxCheckPasswordRegistration" 
+                Height="25"
+                Margin="150,175,0,0" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"  
+                Width="198"
+                Style="{StaticResource CustomPasswordBoxStyle}"/>
+        <Button
+            Content="Регистрация" 
+            Margin="0,0,0,50" 
+            Background="#FF03A9F4" 
+            Foreground="White"
+            Name="buttonRegistration" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Bottom"
+            Click="buttonRegistration_Click" Cursor="Hand"/>
+        <Button
+            Content="Назад" 
+            Margin="0,0,0,10" 
+            Name="buttonBackRegistration"
+            FontSize="10" 
+            Background="{x:Null}" 
+            HorizontalAlignment="Center" 
+            Width="130" Height="32" 
+            VerticalAlignment="Bottom"
+            Click="buttonBackRegistration_Click"/>
+    </Grid>
+</Window>

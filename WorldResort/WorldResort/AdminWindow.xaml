@@ -1,0 +1,54 @@
+﻿<Window x:Class="WorldResort.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldResort"
+        mc:Ignorable="d"
+        Title="WorldResort - Администратор" 
+        Height="450" 
+        Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel
+            Margin="10">
+            <Button
+                x:Name="buttonGetResortMainWindow"
+                Click="buttonGetResortMainWindow_Click"
+                Content="Города-курорты" 
+                Cursor="Hand"
+                Background="#FF03A9F4" 
+                Foreground="White"/>
+            <Button
+                x:Name="buttonPostResortMainWindow"
+                Click="buttonPostResortMainWindow_Click"
+                Content="Добавить город-курорт"
+                Margin="0,10,0,0"
+                Background="#FF03A9F4" 
+                Foreground="White"/>
+            <Button
+                x:Name="buttonPostHotelMainWindow"
+                Click="buttonPostHotelMainWindow_Click"
+                Content="Добавить Отель"
+                Margin="0,10,0,0"
+                Background="#FF03A9F4" 
+                Foreground="White"/>
+            <Button
+                x:Name="buttonGetCountryMainWindow"
+                Click="buttonGetCountryMainWindow_Click"
+                Content="Получить список стран"
+                Margin="0,10,0,0"
+                Background="#FF03A9F4" 
+                Foreground="White"/>
+        </StackPanel>
+        <Frame
+            x:Name="frameMainWindow"
+            Grid.Column="1"
+            NavigationUIVisibility="Hidden"
+            Margin="10"/>
+    </Grid>
+</Window>
